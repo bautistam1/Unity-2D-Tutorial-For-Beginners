@@ -23,7 +23,13 @@ public class InteractionSystem : MonoBehaviour
     public Image examineImage;
     public Text examineText;
     public bool isExamining;
+<<<<<<< HEAD
     public bool isGrabbing;
+=======
+    [Header("Others")]
+    //List of picked items
+    public List<GameObject> pickedItems= new List<GameObject>();
+>>>>>>> parent of 1558bb4 (Inventory System Setup + Inventory UI)
 
     void Update()
     {
@@ -69,6 +75,11 @@ public class InteractionSystem : MonoBehaviour
             detectedObject = obj.gameObject;
             return true;
         }
+    }
+
+    public void PickUpItem(GameObject item)
+    {
+        pickedItems.Add(item);
     }
 
     public void ExamineItem(Item item)

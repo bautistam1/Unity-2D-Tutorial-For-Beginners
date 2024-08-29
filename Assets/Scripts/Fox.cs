@@ -95,10 +95,13 @@ public class Fox : MonoBehaviour
 
         if (FindObjectOfType<InteractionSystem>().isExamining)
             can = false;
+<<<<<<< HEAD
         if (FindObjectOfType<InventorySystem>().isOpen)
             can = false;
         if (isDead)
             can = false;
+=======
+>>>>>>> parent of 1558bb4 (Inventory System Setup + Inventory UI)
 
         return can;
     }
